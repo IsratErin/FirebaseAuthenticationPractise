@@ -2,7 +2,7 @@ import admin from "firebase-admin";
 import { readFile } from "fs/promises";
 
 const serviceAccount = JSON.parse(
-  await readFile(new URL("./firebaseServiceAccountKey.json", import.meta.url))
+  await readFile(new URL("./firebaseServiceAccountKey.json", import.meta.url)) //download generated private key from Service account
 );
 
 admin.initializeApp({
